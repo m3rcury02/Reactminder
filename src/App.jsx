@@ -41,7 +41,7 @@ export default function App() {
   }
 
   return (
-    <div className="m-5 ">
+    <div className="m-10 ">
       <NewTodoForm onSubmit={addTodo} />
       <h1 className=" text-2xl font-bold dark:text-white">Todo List</h1>
       <ToDoList todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} />

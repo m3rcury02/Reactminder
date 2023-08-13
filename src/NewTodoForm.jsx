@@ -11,20 +11,23 @@ export function NewTodoForm({ onSubmit }) {
   }     
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-5 w-52">
-      <div className="flex flex-col gap-1 ">
-        <label htmlFor="item">New Item</label>
-        <input
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-          type="text"
-          id="item"
-          className="rounded-sm bg-blue-500 text-white p-1"
-        />
+    <form onSubmit={handleSubmit} className="flex flex-col gap-2 mb-5">
+      <div className="flex flex-col gap-1">
+        <label htmlFor="item" className="mb-1">New Item</label>
+        <div className="flex flex-row gap-1">
+          <input
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+            type="text"
+            id="item"
+            className="rounded-md bg-blue-500 text-white p-1 mr-2"
+          />
+          <button className="bg-opacity-25 bg-blue-500 rounded-2xl border-2 border-blue-500 p-2 px-4">
+            Add
+          </button>
+        </div>
       </div>
-      <button className="bg-opacity-25 bg-blue-500 rounded-2xl border-2 border-blue-500 p-1">
-        Add
-      </button>
     </form>
   );
+  
 }
